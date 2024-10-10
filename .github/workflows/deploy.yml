@@ -30,3 +30,17 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./out
+
+    - name: Display package.json content
+      run: cat package.json
+
+    - name: Check Node.js and npm versions
+      run: |
+        node --version
+        npm --version
+
+    - name: Install Next.js
+      run: npm install next@latest
+
+    - name: Install other dependencies
+      run: npm install
