@@ -21,7 +21,7 @@ jobs:
 
     - name: Build
       env:
-        NEXT_PUBLIC_BASE_PATH: /your-repo-name
+        NEXT_PUBLIC_BASE_PATH: /relief
       run: npm run build
 
     - name: Deploy
