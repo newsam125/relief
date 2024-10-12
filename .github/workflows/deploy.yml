@@ -20,6 +20,8 @@ jobs:
       run: npm ci
 
     - name: Build
+      env:
+        NEXT_PUBLIC_BASE_PATH: /your-repo-name
       run: npm run build
 
     - name: Deploy
@@ -27,3 +29,6 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./out
+
+    - name: Create .nojekyll file
+      run: touch ./out/.nojekyll
